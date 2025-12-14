@@ -12,7 +12,7 @@ export default function SignUpGoogleButton() {
     startTransition(async () => {
       await signIn.social({
         provider: 'google',
-        callbackURL: 'http://localhost:3000/chat',
+        callbackURL: `${process.env.NEXT_PUBLIC_API_URL}/chat`,
         fetchOptions: {
           onSuccess: () => {
             toast.success('Sign in with Google successful.Redirecting...');

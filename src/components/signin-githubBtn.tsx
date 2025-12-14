@@ -12,7 +12,7 @@ export default function SignUpGithubButton() {
     startTransition(async () => {
       await signIn.social({
         provider: 'github',
-        callbackURL: `${process.env.NEXT_PUBLIC_API_URL}/chat`,
+        callbackURL: `${process.env.NEXT_PUBLIC_BASE_URL}/chat`,
         fetchOptions: {
           onSuccess: () => {
             toast.success('Sign in with Github successful.Redirecting...');

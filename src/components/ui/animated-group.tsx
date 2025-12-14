@@ -1,7 +1,7 @@
 'use client';
-import { ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
-import React from 'react';
+import type { JSX } from 'react';
+import React, { ReactNode } from 'react';
 
 export type PresetType =
   | 'fade'
@@ -126,10 +126,10 @@ function AnimatedGroup({
 
   return (
     <MotionComponent
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
-      className={className}
+      // className={className}
     >
       {React.Children.map(children, (child, index) => (
         <MotionChild key={index} variants={itemVariants}>
